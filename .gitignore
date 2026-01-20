@@ -1,0 +1,4 @@
+Books/__pycache__/
+Books/migrations/__pycache__/
+Library/__pycache__/
+db.sqlite3
