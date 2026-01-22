@@ -20,7 +20,12 @@ from Books import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.WelcomeView.as_view()),
+    path('',views.WelcomeView.as_view(),name='home'),
     path('book/all/',views.BookListView.as_view(),name='list'),
-    path('book/add/',views.BookAddView.as_view(),name='add')
+    path('book/add/',views.BookAddView.as_view(),name='add'),
+    path('book/<int:id>/',views.BookDetail.as_view(),name='detail'),
+    path('book/<int:id>/edit/',views.BookEdit.as_view(),name='update'),
+    path('book/signup/',views.RegistrationView.as_view(),name='signup'),
+    path('book/signin/',views.SignupView.as_view(),name='signin'),
+    path('book/signout/',views.Signout.as_view(),name='signout')
 ]

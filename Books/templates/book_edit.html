@@ -6,9 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>welcome {{request.user}}</h1>
-
-    <a href="{%url 'list' %}">books</a>
-    <a href="{%url 'signout'%}">signout</a>
+    <form action="" method="post">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit">add</button>
+    </form>
 </body>
 </html>

@@ -29,6 +29,9 @@
                 <td>{{d.author}}</td>
                 <td>{{d.category}}</td>
                 <td>{{d.language}}</td>
+                <td><a href="{%url 'detail' d.id %}">view</a></td>
+                <td><a href="{%url 'update' d.id%}">edit</a></td>
+                <td><a href="">delete</a></td>
             </tr>
         </tbody>
         {%endfor%}
